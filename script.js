@@ -12,20 +12,17 @@ function updateCounter() {
     console.log('Current Time:', now);
     console.log('Elapsed Time (ms):', elapsedTime);
     
-    // Check if elapsedTime is negative
-    if (elapsedTime < 0) {
-        document.getElementById('counter').textContent = startCount; // Display 0 if not yet reached
-        requestAnimationFrame(updateCounter); // Keep checking
-        return;
-    }
-
     // Calculate the current count
     const currentCount = Math.floor(startCount + elapsedTime * incrementPerMs);
     // Cap the count at endCount
     const displayCount = Math.min(currentCount, endCount);
+    
     document.getElementById('counter').textContent = displayCount;  // Update the counter display
 
-    if (displayCount < endCount) {
+    // If the elapsed time is less than zero, reset to startCount
+    if (elapsedTime < 0) {
+        document.getElementById('counter').textContent = startCount;
+    } else if (displayCount < endCount) {
         requestAnimationFrame(updateCounter);  // Keep updating the counter
     }
 }
