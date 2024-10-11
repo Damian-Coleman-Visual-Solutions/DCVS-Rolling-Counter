@@ -32,9 +32,3 @@ function updateCounter() {
 
 // Start the counter
 updateCounter();
-
-// Check the current count
-const now = new Date();
-const elapsedTime = now - startDate;  // Time that has passed since the start
-const currentCount = Math.floor(elapsedTime * incrementPerMs);
-console.log('Current Count:', currentCount); // Log the current count
