@@ -8,9 +8,12 @@ body {
     font-family: 'Source Sans Pro', sans-serif; /* Default font for the whole page */
 }
 
-h1 {
+h1,#counter {
     font-size: 3em;
     color: #ffffff;
+    text-align: center;   /* Center the text horizontally */
+    width: 100%;          /* Ensure the element takes full width */
+    margin: 0 auto;       /* Ensure the element is centered */
 }
 
 #counter {
