@@ -38,3 +38,4 @@ function updateCounter() {
 
 // Start the counter
 updateCounter();
+
