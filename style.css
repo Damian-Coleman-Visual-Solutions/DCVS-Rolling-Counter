@@ -20,3 +20,17 @@ h1,#counter {
     font-size: 8em;
     color: #6022A6; /* Customize color as desired */
 }
+/* New slot machine digit animation styles */
+.slot-machine {
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.digit {
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;  /* Animation for sliding effect */
+    width: 0.8em;  /* Adjust width to ensure spacing */
+    text-align: center;
+}
