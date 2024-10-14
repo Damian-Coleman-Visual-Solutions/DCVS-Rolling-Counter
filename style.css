@@ -1,30 +1,32 @@
 body {
-    background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/a1509da97dc78396d750971d8fe1488b5fbd1206/GEHC%20Counter%20Display-02.jpg');  /* Replace with your graphic */
-    background-size: cover;  /* Adjusts to cover the entire screen */
-    background-position: center;  /* Centers the image */
-    background-repeat: no-repeat;  /* Ensures the image doesn't repeat */
-     height: 100vh;  /* Sets the body height to full viewport height */
+    background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/a1509da97dc78396d750971d8fe1488b5fbd1206/GEHC%20Counter%20Display-02.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;  /* Full viewport height */
     margin: 0;  /* Removes any margin */
     font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
 }
 
-h1,#counter {
+.content {
+    text-align: center;  /* Centers h1 and counter */
+}
+
+h1 {
     font-size: 3em;
     color: #ffffff;
-    text-align: center;   /* Center the text horizontally */
-    width: 100%;          /* Ensure the element takes full width */
-    margin: 0 auto;       /* Ensure the element is centered */
+    margin-bottom: 20px;  /* Space between h1 and counter */
 }
 
 #counter {
-    position: absolute;   /* Absolute positioning for precise control */
-    top: 50%;             /* Adjust the vertical position */
-    left: 50%;            /* Adjust the horizontal position */
-    transform: translate(-50%, -50%); /* Centers the counter relative to the parent */
     font-size: 8em;
-    color: #ffffff; /* Customize color as desired */
+    color: #ffffff;
 }
-/* New slot machine digit animation styles */
+
+/* Slot machine digit animation styles */
 .slot-machine {
     display: flex;
     justify-content: center;
