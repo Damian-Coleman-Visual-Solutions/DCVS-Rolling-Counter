@@ -16,7 +16,7 @@ h1 {
     font-size: 3em;
     color: #ffffff;
     text-align: center;
-    margin: 0 0 10px 0; /* Adds a little spacing between the h1 and the counter */
+    margin: 0 0 05px 0; /* Adds a little spacing between the h1 and the counter */
 }
 
 #counter {
