@@ -3,27 +3,27 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;  /* Full viewport height */
-    margin: 0;  /* Removes any margin */
+    height: 100vh;
+    margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
     display: flex;
-    justify-content: center;  /* Center content horizontally */
-    align-items: center;  /* Center content vertically */
-}
-
-.content {
-    text-align: center;  /* Centers h1 and counter */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Aligns the elements vertically */
 }
 
 h1 {
     font-size: 3em;
     color: #ffffff;
-    margin-bottom: 20px;  /* Space between h1 and counter */
+    text-align: center;
+    margin: 0 0 20px 0; /* Adds a little spacing between the h1 and the counter */
 }
 
 #counter {
     font-size: 8em;
     color: #ffffff;
+    text-align: center;
+    margin: 0;
 }
 
 /* Slot machine digit animation styles */
