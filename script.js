@@ -26,7 +26,7 @@ function updateCounter() {
             setTimeout(() => {
                 digitElements[i].textContent = newDigit;  // Update the digit
                 digitElements[i].style.transform = 'translateY(0)';  // Slide the digit into view
-            }, 200); // Delay the update slightly to create a smooth rolling effect
+            }, 400); // Delay the update slightly to create a smooth rolling effect
         }
     }
 
