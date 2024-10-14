@@ -30,7 +30,7 @@ h1,#counter {
 
 .digit {
     display: inline-block;
-    transition: transform 0.5s ease-in-out;  /* Animation for sliding effect */
-    width: 0.8em;  /* Adjust width to ensure spacing */
+    transition: transform 1.5s ease-in-out;  /* Animation for sliding effect */
+    width: 0.4em;  /* Adjust width to ensure spacing */
     text-align: center;
 }
