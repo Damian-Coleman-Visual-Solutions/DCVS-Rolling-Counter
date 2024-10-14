@@ -1,11 +1,9 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    background-color: #a9a9a9;
-    font-family: 'Source Sans Pro', sans-serif; /* Default font for the whole page */
+    background-image: url(https://drive.google.com/file/d/15T3kB7XE2845ob-E3C4OlNubc9TeFJRI/view?usp=sharing);  /* Replace with your graphic */
+    background-size: cover;  /* Adjusts to cover the entire screen */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Ensures the image doesn't repeat */
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1,#counter {
@@ -17,8 +15,12 @@ h1,#counter {
 }
 
 #counter {
+    position: absolute;   /* Absolute positioning for precise control */
+    top: 50%;             /* Adjust the vertical position */
+    left: 50%;            /* Adjust the horizontal position */
+    transform: translate(-50%, -50%); /* Centers the counter relative to the parent */
     font-size: 8em;
-    color: #6022A6; /* Customize color as desired */
+    color: #ffffff; /* Customize color as desired */
 }
 /* New slot machine digit animation styles */
 .slot-machine {
