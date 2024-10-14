@@ -11,11 +11,24 @@ function updateCounter() {
     const elapsedTime = now - startDate;  // Calculate elapsed time since start date
     const currentCount = Math.floor(startCount + elapsedTime * incrementPerMs);  // Calculate the current count
 
-    // Format the number with commas
-    const formattedCount = currentCount.toLocaleString();
+    // Format the number with commas and ensure it's exactly 6 digits
+    const formattedCount = currentCount.toString().padStart(6, '0');  // Pad with leading zeros if necessary
 
-    // Display the formatted count in the HTML element with id 'counter'
-    document.getElementById('counter').textContent = formattedCount;
+    // Update each digit individually
+    const digitElements = document.querySelectorAll('.digit');
+    for (let i = 0; i < digitElements.length; i++) {
+        // Get the current digit in the counter
+        const newDigit = formattedCount[i];
+
+        // Animate the digit by updating the text content
+        if (digitElements[i].textContent !== newDigit) {
+            digitElements[i].style.transform = 'translateY(-100%)'; // Slide the digit out of view
+            setTimeout(() => {
+                digitElements[i].textContent = newDigit;  // Update the digit
+                digitElements[i].style.transform = 'translateY(0)';  // Slide the digit into view
+            }, 200); // Delay the update slightly to create a smooth rolling effect
+        }
+    }
 
     // Continue updating the counter as long as it hasn't reached the end count
     if (currentCount < endCount) {
