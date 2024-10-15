@@ -22,7 +22,7 @@ h1 {
     font-size: 3em;
     color: #ffffff;
     text-align: center;
-    margin: 0 0 3px 0; /* Corrected the margin value */
+    margin: 0 0 3px 0; /* Adds spacing between the h1 and the counter */
 }
 
 #counter {
@@ -31,7 +31,7 @@ h1 {
     text-align: center;
     margin: 0;
 }
-    
+
 /* Slot machine digit animation styles */
 .slot-machine {
     display: flex;
@@ -46,7 +46,6 @@ h1 {
     width: 0.6em;  /* Adjust width to ensure spacing */
     text-align: center;
 }
-
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {  /* For tablets */
@@ -69,7 +68,10 @@ h1 {
     }
 
     body {
-        background-size: contain; /* Ensure the background scales without cropping on mobile */
+        background-size: contain; /* Ensures the background scales without cropping on mobile */
+        background-position: top center; /* Better position for mobile */
         padding: 10px;
+        height: auto; /* Allow the content to expand beyond the height of the screen */
     }
 }
+
