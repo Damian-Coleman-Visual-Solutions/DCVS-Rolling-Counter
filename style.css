@@ -68,10 +68,9 @@ h1 {
     }
 
     body {
-        background-size: contain; /* Ensures the background scales without cropping on mobile */
-        background-position: top center; /* Better position for mobile */
+        background-size: contain; /* Ensure the background scales without cropping on mobile */
+        background-position: top; /* Position the background correctly */
         padding: 10px;
-        height: auto; /* Allow the content to expand beyond the height of the screen */
+        min-height: 100vh; /* Ensure content takes up the full screen height */
     }
 }
-
