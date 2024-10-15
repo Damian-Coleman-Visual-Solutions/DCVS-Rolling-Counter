@@ -22,7 +22,7 @@ body {
 h1 {
    font-size: 3vw; /* responsive font size */
    max-width: 90vw; /* makes sure it doesn't overflow the screen */
-    color: #ffffff;
+    color: #ffffff ;
     text-align: center;
     margin: 0 0 3px 0; /* Adds spacing between the h1 and the counter */
 }
@@ -31,7 +31,7 @@ h1 {
    #counter {
    font-size: 8vw; /* responsive font size */
    max-width: 90vw; /* makes sure it doesn't overflow the screen */
-    color: #ffffff;
+    color: #ffffff ;
     text-align: center;
     margin: 0;
 }
@@ -60,7 +60,7 @@ h1 {
         font-size: 8vw;
     }
     #counter {
-        font-size: 14vw;
+        font-size: 20vw;
     }
 }
 
@@ -73,7 +73,7 @@ h1 {
         font-size: 5vw;
     }
     #counter {
-        font-size: 12vw;
+        font-size: 20vw;
     }
 }
 
