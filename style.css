@@ -5,11 +5,11 @@
 
 body {
     background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/a1509da97dc78396d750971d8fe1488b5fbd1206/GEHC%20Counter%20Display-02.jpg');
-    background-size: cover;
+    background-size: cover; /* Ensures the image covers the entire screen */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh; /* Ensures full screen height */
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
     display: flex;
@@ -20,16 +20,16 @@ body {
 }
 
 h1 {
-    font-size: 3vw; /* responsive font size */
-    max-width: 90vw; /* makes sure it doesn't overflow the screen */
+    font-size: 3vw; /* Responsive font size */
+    max-width: 90vw; /* Makes sure it doesn't overflow the screen */
     color: #ffffff;
     text-align: center;
     margin: 0 0 3px 0; /* Adds spacing between the h1 and the counter */
 }
 
 #counter {
-    font-size: 8vw; /* responsive font size */
-    max-width: 90vw; /* makes sure it doesn't overflow the screen */
+    font-size: 8vw; /* Responsive font size */
+    max-width: 90vw; /* Makes sure it doesn't overflow the screen */
     color: #ffffff;
     text-align: center;
     margin: 0;
@@ -54,32 +54,29 @@ h1 {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     body {
-        background-size: contain;
+        background-size: cover; /* Ensure background covers the entire screen */
+        background-position: top center; /* Align the background at the top */
+        min-height: 100vh; /* Ensure full screen height */
     }
     h1 {
         font-size: 8vw;
     }
     #counter {
-        font-size: 20vw;
+        font-size: 12vw;
     }
 }
 
 @media (max-width: 480px) {
     body {
-        background-size: contain;
+        background-size: cover; /* Ensure the background covers the entire screen */
+        background-position: top center;
+        min-height: 100vh;
         padding: 10px;
     }
     h1 {
         font-size: 5vw;
     }
     #counter {
-        font-size: 20vw;
+        font-size: 12vw;
     }
-}
-
-body {
-    background-size: contain; /* Ensure the background scales without cropping on mobile */
-    background-position: top; /* Position the background correctly */
-    padding: 10px;
-    min-height: 100vh; /* Ensure content takes up the full screen height */
 }
