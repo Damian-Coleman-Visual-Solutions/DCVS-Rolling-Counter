@@ -1,35 +1,37 @@
-/* Apply border-box universally */
-* {
-    box-sizing: border-box;
-}
-
+/* Default background for larger screens (wide/desktop) */
 body {
-    background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/a1509da97dc78396d750971d8fe1488b5fbd1206/GEHC%20Counter%20Display-02.jpg');
-    background-size: cover; /* Ensures the image covers the entire screen */
+    background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/blob/ad39428a3b98a15ee640f9dfd1b4fea1ef528f73/GEHC%20Counter%20Display-01.png');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100vh; /* Ensures full screen height */
+    min-height: 100vh;
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Aligns the elements vertically */
-    padding: 20px;  /* Adds padding to prevent content touching the screen edges */
+    flex-direction: column;
+    padding: 20px;
 }
 
-h1 {
-    font-size: 3vw; /* Responsive font size */
-    max-width: 90vw; /* Makes sure it doesn't overflow the screen */
-    color: #ffffff;
-    text-align: center;
-    margin: 0 0 3px 0; /* Adds spacing between the h1 and the counter */
+/* Media query for smaller screens (portrait/mobile) */
+@media (max-width: 768px) {
+    body {
+        background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/blob/ad39428a3b98a15ee640f9dfd1b4fea1ef528f73/GEHC%20Counter%20Display-02.png');
+        background-attachment: scroll;
+        padding: 10px;
+    }
+}
+
+/* Apply border-box universally */
+* {
+    box-sizing: border-box;
 }
 
 #counter {
     font-size: 8vw; /* Responsive font size */
-    max-width: 90vw; /* Makes sure it doesn't overflow the screen */
+    max-width: 90vw;
     color: #ffffff;
     text-align: center;
     margin: 0;
@@ -41,23 +43,18 @@ h1 {
     justify-content: center;
     font-size: 4em;
     font-family: 'Source Sans Pro', sans-serif;
-    color: #ffffff; /* Added color to the slot machine text */
+    color: #ffffff;
 }
 
 .digit {
     display: inline-block;
-    transition: transform 1.5s ease-in-out;  /* Animation for sliding effect */
-    width: 0.6em;  /* Adjust width to ensure spacing */
+    transition: transform 1.5s ease-in-out;
+    width: 0.6em;
     text-align: center;
 }
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    body {
-        background-size: cover; /* Ensure background covers the entire screen */
-        background-position: top center; /* Align the background at the top */
-        min-height: 100vh; /* Ensure full screen height */
-    }
     h1 {
         font-size: 8vw;
     }
@@ -67,12 +64,6 @@ h1 {
 }
 
 @media (max-width: 480px) {
-    body {
-        background-size: cover; /* Ensure the background covers the entire screen */
-        background-position: top center;
-        min-height: 100vh;
-        padding: 10px;
-    }
     h1 {
         font-size: 5vw;
     }
