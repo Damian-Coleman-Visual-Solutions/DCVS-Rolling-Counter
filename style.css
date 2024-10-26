@@ -1,3 +1,8 @@
+/* Apply border-box universally */
+* {
+    box-sizing: border-box;
+}
+
 /* Default background for larger screens (wide/desktop) */
 body {
     background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/blob/ad39428a3b98a15ee640f9dfd1b4fea1ef528f73/GEHC%20Counter%20Display-01.png');
@@ -15,22 +20,9 @@ body {
     padding: 20px;
 }
 
-/* Media query for smaller screens (portrait/mobile) */
-@media (max-width: 768px) {
-    body {
-        background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/blob/ad39428a3b98a15ee640f9dfd1b4fea1ef528f73/GEHC%20Counter%20Display-02.png');
-        background-attachment: scroll;
-        padding: 10px;
-    }
-}
-
-/* Apply border-box universally */
-* {
-    box-sizing: border-box;
-}
-
+/* Counter styling */
 #counter {
-    font-size: 8vw; /* Responsive font size */
+    font-size: 8vw; /* Responsive font size for large screens */
     max-width: 90vw;
     color: #ffffff;
     text-align: center;
@@ -53,21 +45,31 @@ body {
     text-align: center;
 }
 
-/* Responsive design for smaller screens */
+/* Media query for tablets (768px and below) */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 8vw;
+    body {
+        background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/blob/ad39428a3b98a15ee640f9dfd1b4fea1ef528f73/GEHC%20Counter%20Display-02.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        padding: 10px;
     }
+    
     #counter {
-        font-size: 12vw;
+        font-size: 12vw; /* Responsive font size for tablets */
     }
 }
 
+/* Media query for mobile phones (480px and below) */
 @media (max-width: 480px) {
-    h1 {
-        font-size: 5vw;
+    body {
+        background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/blob/ad39428a3b98a15ee640f9dfd1b4fea1ef528f73/GEHC%20Counter%20Display-02.png');
+        background-size: cover;
+        background-position: center;
+        padding: 10px;
     }
+    
     #counter {
-        font-size: 12vw;
+        font-size: 12vw; /* Responsive font size for mobile */
     }
 }
