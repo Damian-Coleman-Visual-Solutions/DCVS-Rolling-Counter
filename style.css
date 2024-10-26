@@ -5,7 +5,7 @@
 
 /* Default background for larger screens (wide/desktop) */
 body {
-    background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/blob/ad39428a3b98a15ee640f9dfd1b4fea1ef528f73/GEHC%20Counter%20Display-01.png');
+    background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/refs/heads/main/GEHC%20Counter%20Display-02.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,7 +48,7 @@ body {
 /* Media query for tablets (768px and below) */
 @media (max-width: 768px) {
     body {
-        background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/blob/ad39428a3b98a15ee640f9dfd1b4fea1ef528f73/GEHC%20Counter%20Display-02.png');
+        background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/refs/heads/main/GEHC%20Counter%20Display-01.png');
         background-size: cover;
         background-position: center;
         background-attachment: scroll;
