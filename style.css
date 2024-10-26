@@ -71,5 +71,6 @@ body {
     
     #counter {
         font-size: 12vw; /* Responsive font size for mobile */
+        margin-top: 5px; /* Adjust this value to move the counter down */
     }
 }
