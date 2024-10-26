@@ -67,6 +67,7 @@ body {
         background-size: cover;
         background-position: center;
         padding: 10px;
+         align-items: flex-start;
     }
     
     #counter {
