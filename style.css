@@ -31,6 +31,15 @@ body {
     align-items: flex-end; /* Aligns items to the bottom */
 }
 
+/* Slot machine digit animation styles */
+.slot-machine {
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+}
+
 /* Individual digit styling */
 .digit {
     width: 0.8em;
@@ -44,13 +53,14 @@ body {
 
 /* UTD abbreviation styling */
 #counter::after {
-    content: attr(data-display) " UTD";  /* Use the data-display for the formatted number */
+    content: " UTD";
     font-size: 0.3em; /* Slightly smaller than digits */
-    padding-left: 1em;
+    padding-left: 0em;
+    line-height: 1; /* Matches line-height of digits */
     align-self: flex-end; /* Aligns UTD with the bottom of the digits */
+    display: flex;
+    align-items: flex-end; /* Aligns with digit baseline */
 }
-
-
 /* Media query for tablets (768px and below) */
 @media (max-width: 768px) {
     body {
@@ -73,7 +83,7 @@ body {
         background-size: cover;
         background-position: center;
         padding: 15px;
-        align-items: flex-start;
+         align-items: flex-start;
     }
     
     #counter {
