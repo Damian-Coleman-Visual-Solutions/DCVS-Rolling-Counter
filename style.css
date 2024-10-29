@@ -22,7 +22,7 @@ body {
 
 /* Counter styling */
 #counter {
-    font-size: 7vw; /* Responsive font size for large screens */
+    font-size: 6vw; /* Responsive font size for large screens */
     max-width: 150vw;
     color: #ffffff;
     text-align: center;
@@ -33,7 +33,7 @@ body {
 .slot-machine {
     display: flex;
     justify-content: center;
-    font-size: 4em;
+    font-size: 3em;
     font-family: 'Source Sans Pro', sans-serif;
     color: #ffffff;
 }
