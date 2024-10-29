@@ -24,8 +24,7 @@ body {
 #counter {
     display: inline-flex; /* Container shrinks to fit digits */
     font-size: 7vw; /* Responsive font size for large screens */
-    max-width: 70vw;
-    color: rgba(255, 0, 0, 0.2);
+    color: #ffffff;
     text-align: center;
     margin: 10;
 }
@@ -42,7 +41,7 @@ body {
 .digit {
     display: inline-block;
     transition: transform 1.5s ease-in-out;
-    width: 0.6em;
+    width: 1em;
     text-align: center;
 }
 .rolling {
