@@ -54,7 +54,7 @@ body {
 /* UTD abbreviation styling */
 #counter::after {
     content: " UTD";
-    font-size: 0.1em; /* Slightly smaller than digits */
+    font-size: 0.2em; /* Slightly smaller than digits */
     padding-left: 0em;
     line-height: 1; /* Matches line-height of digits */
     align-self: flex-end; /* Aligns UTD with the bottom of the digits */
