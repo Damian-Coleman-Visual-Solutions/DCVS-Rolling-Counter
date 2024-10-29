@@ -23,11 +23,12 @@ body {
 /* Counter styling */
 #counter {
     display: inline-flex; /* Container shrinks to fit digits */
-    font-size: 7em; /* Responsive font size for large screens */
+    font-size: clamp(4vw, 5vw, 5vw); /* Responsive font size */
     color: #ffffff;
     text-align: center;
     gap: -2em; /* Reduces spacing between digits */
     margin: 0;
+    align-items: flex-end; /* Aligns items to the bottom */
 }
 
 /* Slot machine digit animation styles */
@@ -41,7 +42,7 @@ body {
 
 /* Individual digit styling */
 .digit {
-    width: 1em;
+    width: 0.8em;
     transition: transform 1.5s ease-in-out;
 }
 .rolling {
