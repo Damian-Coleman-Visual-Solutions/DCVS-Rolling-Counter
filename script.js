@@ -12,7 +12,8 @@ function updateCounter() {
     const currentCount = Math.floor(startCount + elapsedTime * incrementPerMs);  // Calculate the current count
 
     // Format the number with commas
-    const formattedCount = currentCount.toLocaleString().padStart(6, '0');  // Format with commas
+     const formattedCount = `${currentCount.toLocaleString()} UTD`.padStart(6, '0');
+
 
     // Update each digit individually
     const digitElements = document.querySelectorAll('.digit');
