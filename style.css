@@ -22,7 +22,7 @@ body {
 
 /* Counter styling */
 #counter {
-    font-size: 5vw; /* Responsive font size for large screens */
+    font-size: 7vw; /* Responsive font size for large screens */
     max-width: 70vw;
     color: #ffffff;
     text-align: center;
@@ -55,7 +55,7 @@ body {
         background-size: cover;
         background-position: center;
         background-attachment: scroll;
-        padding: 10px;
+        padding: 15px;
     }
     
     #counter {
