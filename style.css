@@ -54,8 +54,8 @@ body {
 /* UTD abbreviation styling */
 #counter::after {
     content: " UTD";
-    font-size: 0.1em; /* Slightly smaller than digits */
-    padding-left: 0.1em;
+    font-size: 0.3em; /* Slightly smaller than digits */
+    padding-left: 5em;
 }
 /* Media query for tablets (768px and below) */
 @media (max-width: 768px) {
