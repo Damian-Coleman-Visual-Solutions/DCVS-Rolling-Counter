@@ -29,8 +29,8 @@ function updateCounter() {
         }
     }
 
-    // Update the counter's text content with commas for overall display
-    document.getElementById('counter').setAttribute('data-display', displayCount + ' UTD');
+    // Update the data-display attribute to show formatted count
+    document.getElementById('counter').setAttribute('data-display', displayCount);
 
     // Continue updating the counter as long as it hasn't reached the end count
     if (currentCount < endCount) {
