@@ -44,7 +44,10 @@ body {
     width: 0.6em;
     text-align: center;
 }
-
+.rolling {
+    transform: translateY(-20px); /* Adjust this for a rolling effect */
+    transition: transform 1s ease-in-out;
+}
 /* Media query for tablets (768px and below) */
 @media (max-width: 768px) {
     body {
