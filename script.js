@@ -11,9 +11,8 @@ function updateCounter() {
     const elapsedTime = now - startDate;  // Calculate elapsed time since start date
     const currentCount = Math.floor(startCount + elapsedTime * incrementPerMs);  // Calculate the current count
 
-    // Format the number with commas
-     const formattedCount = `${currentCount.toLocaleString()} UTD`.padStart(6, '0');
-
+    // Format the number with leading zeros to ensure it is always 6 digits
+    const formattedCount = currentCount.toString().padStart(6, '0');
 
     // Update each digit individually
     const digitElements = document.querySelectorAll('.digit');
@@ -21,7 +20,7 @@ function updateCounter() {
         // Get the current digit in the counter
         const newDigit = formattedCount[i];
 
-        // Animate the digit by updating the text content
+        // Update the digit only if it has changed
         if (digitElements[i].textContent !== newDigit) {
             digitElements[i].style.transform = 'translateY(-100%)'; // Slide the digit out of view
             setTimeout(() => {
