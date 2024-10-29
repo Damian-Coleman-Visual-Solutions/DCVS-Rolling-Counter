@@ -25,7 +25,7 @@ body {
     display: inline-flex; /* Container shrinks to fit digits */
     font-size: 7vw; /* Responsive font size for large screens */
     max-width: 70vw;
-    color: #ffffff;
+    color: rgba(255, 0, 0, 0.2);
     text-align: center;
     margin: 10;
 }
