@@ -44,6 +44,7 @@ body {
 .digit {
     width: 0.8em;
     transition: transform 1.5s ease-in-out;
+    line-height: 1; /* Set a consistent line-height */
 }
 .rolling {
     transform: translateY(-20px); /* Adjust this for a rolling effect */
@@ -55,7 +56,10 @@ body {
     content: " UTD";
     font-size: 0.3em; /* Slightly smaller than digits */
     padding-left: 0em;
+    line-height: 1; /* Matches line-height of digits */
     align-self: flex-end; /* Aligns UTD with the bottom of the digits */
+    display: flex;
+    align-items: flex-end; /* Aligns with digit baseline */
 }
 /* Media query for tablets (768px and below) */
 @media (max-width: 768px) {
