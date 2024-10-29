@@ -23,10 +23,10 @@ body {
 /* Counter styling */
 #counter {
     display: flex;
-    font-size: clamp(5vw, 7vw, 7vw); /* Responsive font size */
+    font-size: clamp(4vw, 5vw, 5vw); /* Responsive font size */
     color: #ffffff;
     text-align: center;
-    gap: 0.15em; /* Reduces spacing between digits */
+    gap: 0.09em; /* Reduces spacing between digits */
     margin: 0;
     overflow: hidden; /* Ensures it doesn't expand past the screen */
     white-space: nowrap; /* Prevents text wrapping */
@@ -54,7 +54,7 @@ body {
 /* UTD abbreviation styling */
 #counter::after {
     content: " UTD";
-    font-size: 0.7em; /* Slightly smaller than digits */
+    font-size: 0.1em; /* Slightly smaller than digits */
     padding-left: 0.1em;
 }
 /* Media query for tablets (768px and below) */
