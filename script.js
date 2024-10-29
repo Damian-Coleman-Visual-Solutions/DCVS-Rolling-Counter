@@ -11,24 +11,26 @@ function updateCounter() {
     const elapsedTime = now - startDate;  // Calculate elapsed time since start date
     const currentCount = Math.floor(startCount + elapsedTime * incrementPerMs);  // Calculate the current count
 
-    // Format the number with commas and ensure it's exactly 6 digits
-    const formattedCount = currentCount.toString().padStart(6, '0');  // Pad with leading zeros if necessary
+    // Format the number with commas for display, and as a padded string for updating individual digits
+    const displayCount = currentCount.toLocaleString();  // With commas
+    const formattedCount = currentCount.toString().padStart(6, '0');  // Six-digit, padded
 
-    // Update each digit individually
+    // Update each digit individually without commas for alignment
     const digitElements = document.querySelectorAll('.digit');
     for (let i = 0; i < digitElements.length; i++) {
-        // Get the current digit in the counter
         const newDigit = formattedCount[i];
 
-        // Animate the digit by updating the text content
         if (digitElements[i].textContent !== newDigit) {
             digitElements[i].style.transform = 'translateY(-100%)'; // Slide the digit out of view
             setTimeout(() => {
                 digitElements[i].textContent = newDigit;  // Update the digit
                 digitElements[i].style.transform = 'translateY(0)';  // Slide the digit into view
-            }, 400); // Delay the update slightly to create a smooth rolling effect
+            }, 400); // Delay for smooth rolling effect
         }
     }
+
+    // Update the counter's text content with commas for overall display
+    document.getElementById('counter').setAttribute('data-display', displayCount + ' UTD');
 
     // Continue updating the counter as long as it hasn't reached the end count
     if (currentCount < endCount) {
