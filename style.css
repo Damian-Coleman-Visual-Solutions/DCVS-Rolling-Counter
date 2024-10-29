@@ -33,7 +33,7 @@ body {
 .slot-machine {
     display: flex;
     justify-content: center;
-    font-size: 3em;
+    font-size: 2em;
     font-family: 'Source Sans Pro', sans-serif;
     color: #ffffff;
 }
@@ -41,7 +41,7 @@ body {
 .digit {
     display: inline-block;
     transition: transform 1.5s ease-in-out;
-    width: 0.6em;
+    width: 0.5em;
     text-align: center;
 }
 .rolling {
@@ -59,7 +59,7 @@ body {
     }
     
     #counter {
-        font-size: 12vw; /* Responsive font size for tablets */
+        font-size: 10vw; /* Responsive font size for tablets */
     }
 }
 
@@ -69,12 +69,12 @@ body {
         background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/blob/ad39428a3b98a15ee640f9dfd1b4fea1ef528f73/GEHC%20Counter%20Display-02.png');
         background-size: cover;
         background-position: center;
-        padding: 10px;
+        padding: 08px;
          align-items: flex-start;
     }
     
     #counter {
-        font-size: 12vw; /* Responsive font size for mobile */
+        font-size: 10vw; /* Responsive font size for mobile */
         margin-top: 80px; /* Adjust this value to move the counter down */
     }
 }
