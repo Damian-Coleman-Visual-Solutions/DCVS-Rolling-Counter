@@ -22,6 +22,7 @@ body {
 
 /* Counter styling */
 #counter {
+    width: 6em; /* Set a fixed width that can accommodate 6 digits */
     display: flex;
     font-size: clamp(4vw, 5vw, 5vw); /* Responsive font size */
     color: #ffffff;
@@ -44,7 +45,7 @@ body {
 
 /* Individual digit styling */
 .digit {
-    width: 0.5em;
+    width: 0.75em;
     transition: transform 1.5s ease-in-out;
 }
 .rolling {
