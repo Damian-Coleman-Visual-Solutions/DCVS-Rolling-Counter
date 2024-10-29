@@ -26,10 +26,11 @@ body {
     font-size: clamp(4vw, 5vw, 5vw); /* Responsive font size */
     color: #ffffff;
     text-align: center;
-    gap: 0.09em; /* Reduces spacing between digits */
+    gap: 0.05em; /* Reduces spacing between digits */
     margin: 0;
     overflow: hidden; /* Ensures it doesn't expand past the screen */
     white-space: nowrap; /* Prevents text wrapping */
+    align-items: flex-end; /* Aligns items to the bottom */
 }
 
 /* Slot machine digit animation styles */
@@ -43,7 +44,7 @@ body {
 
 /* Individual digit styling */
 .digit {
-    width: 1em;
+    width: 0.5em;
     transition: transform 1.5s ease-in-out;
 }
 .rolling {
@@ -55,7 +56,8 @@ body {
 #counter::after {
     content: " UTD";
     font-size: 0.3em; /* Slightly smaller than digits */
-    padding-left: 5em;
+    padding-left: 1em;
+     align-self: flex-end; /* Aligns UTD with the bottom of the digits */
 }
 /* Media query for tablets (768px and below) */
 @media (max-width: 768px) {
