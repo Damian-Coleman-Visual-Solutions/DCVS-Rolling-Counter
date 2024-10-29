@@ -22,6 +22,7 @@ body {
 
 /* Counter styling */
 #counter {
+    display: inline-flex; /* Container shrinks to fit digits */
     font-size: 7vw; /* Responsive font size for large screens */
     max-width: 70vw;
     color: #ffffff;
@@ -55,7 +56,7 @@ body {
         background-size: cover;
         background-position: center;
         background-attachment: scroll;
-        padding: 15px;
+        padding: 25px;
     }
     
     #counter {
@@ -69,12 +70,12 @@ body {
         background-image: url('https://raw.githubusercontent.com/Damian-Coleman-Visual-Solutions/DCVS-Rolling-Counter/blob/ad39428a3b98a15ee640f9dfd1b4fea1ef528f73/GEHC%20Counter%20Display-02.png');
         background-size: cover;
         background-position: center;
-        padding: 10px;
+        padding: 15px;
          align-items: flex-start;
     }
     
     #counter {
         font-size: 12vw; /* Responsive font size for mobile */
-        margin-top: 80px; /* Adjust this value to move the counter down */
+        margin-top: 85px; /* Adjust this value to move the counter down */
     }
 }
