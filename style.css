@@ -22,6 +22,7 @@ body {
 
 /* Counter styling */
 #counter {
+    border: 1px solid red; /* Border to see the container */
     width: 6em; /* Set a fixed width that can accommodate 6 digits */
     display: flex;
     font-size: clamp(4vw, 5vw, 5vw); /* Responsive font size */
@@ -45,6 +46,7 @@ body {
 
 /* Individual digit styling */
 .digit {
+    border: 1px solid blue; /* Border to see each digit */
     width: 0.75em;
     transition: transform 1.5s ease-in-out;
 }
