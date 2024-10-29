@@ -23,7 +23,7 @@ body {
 /* Counter styling */
 #counter {
     display: inline-flex; /* Container shrinks to fit digits */
-    font-size: clamp(4vw, 5vw, 5vw); /* Responsive font size */
+    font-size: clamp(6vw, 6vw, 6vw); /* Responsive font size */
     color: #ffffff;
     text-align: center;
     gap: -2em; /* Reduces spacing between digits */
