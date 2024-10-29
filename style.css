@@ -10,7 +10,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 108vh;
+    min-height: 109vh;
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
     display: flex;
@@ -44,7 +44,6 @@ body {
 .digit {
     width: 0.8em;
     transition: transform 1.5s ease-in-out;
-    line-height: 1; /* Set a consistent line-height */
 }
 .rolling {
     transform: translateY(-20px); /* Adjust this for a rolling effect */
@@ -53,11 +52,9 @@ body {
 
 /* UTD abbreviation styling */
 #counter::after {
-    content: " UTD";
+    content: " YTD";
     font-size: 0.2em; /* Slightly smaller than digits */
     padding-left: 0em;
-    line-height: 1; /* Matches line-height of digits */
-    align-self: flex-end; /* Aligns UTD with the bottom of the digits */
     display: flex;
     align-items: flex-end; /* Aligns with digit baseline */
 }
