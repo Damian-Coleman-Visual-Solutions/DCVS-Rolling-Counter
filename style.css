@@ -42,7 +42,7 @@ body {
 .digit {
     display: inline-block;
     transition: transform 1.5s ease-in-out;
-    width: 0.55em;
+    width: 0.6em;
     text-align: center;
 }
 .rolling {
