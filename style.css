@@ -44,11 +44,12 @@ body {
 
 /* UTD abbreviation styling */
 #counter::after {
-    content: " UTD";
+    content: attr(data-display) " UTD";  /* Use the data-display for the formatted number */
     font-size: 0.3em; /* Slightly smaller than digits */
     padding-left: 1em;
     align-self: flex-end; /* Aligns UTD with the bottom of the digits */
 }
+
 
 /* Media query for tablets (768px and below) */
 @media (max-width: 768px) {
