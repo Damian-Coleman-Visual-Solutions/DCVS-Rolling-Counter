@@ -5,6 +5,7 @@ const endCount = 350000;       // The final count after 1 year
 const msInAYear = 365 * 24 * 60 * 60 * 1000;  // Number of milliseconds in a year
 const incrementPerMs = (endCount - startCount) / msInAYear;  // Increment per millisecond
 
+
 // Function to update the counter
 function updateCounter() {
     const now = new Date();  // Get the current date and time
