@@ -23,7 +23,7 @@ body {
 /* Counter styling */
 #counter {
     font-size: 8vw; /* Responsive font size for large screens */
-    max-width: 90vw;
+    max-width: 100vw;
     color: #ffffff;
     text-align: center;
     margin: 0;
