@@ -1,8 +1,8 @@
 // Set up the start date, initial count, and end count
-const startDate = new Date('2024-01-01T00:00:00');  // Starting from Jan 1, 2024
+const startDate = new Date('2025-01-01T00:00:00');  // Starting from Jan 1, 2025
 const startCount = 0;          // The initial count
-const endCount = 350000;       // The final count after 1 year
-const msInAYear = 365 * 24 * 60 * 60 * 1000;  // Number of milliseconds in a year
+const endCount = 340100;       // The final count after 1 year
+const msInAYear = 365 * 24 * 60 * 60 * 1000;  // Number of milliseconds in a non-leap year
 const incrementPerMs = (endCount - startCount) / msInAYear;  // Increment per millisecond
 
 // Function to update the counter
