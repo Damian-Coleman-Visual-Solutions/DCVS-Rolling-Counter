@@ -1,39 +1,46 @@
-// Set up the start date, initial count, and end count
-const startDate = new Date('2025-01-01T00:00:00');  // Starting from Jan 1, 2025
-const startCount = 0;          // The initial count
-const endCount = 340100;       // The final count after 1 year
-const msInAYear = 365 * 24 * 60 * 60 * 1000;  // Number of milliseconds in a non-leap year
-const incrementPerMs = (endCount - startCount) / msInAYear;  // Increment per millisecond
+// ===== 2026 COUNTER CONFIG =====
+const startDate = new Date('2026-01-01T00:00:00'); // Start of 2026
+const startCount = 0;
+const endCount = 283200; // 283.2k target for 2026
 
-// Function to update the counter
+const msInAYear = 365 * 24 * 60 * 60 * 1000;
+const incrementPerMs = (endCount - startCount) / msInAYear;
+
+// ===== UPDATE FUNCTION =====
 function updateCounter() {
-    const now = new Date();  // Get the current date and time
-    const elapsedTime = now - startDate;  // Calculate elapsed time since start date
-    const currentCount = Math.floor(startCount + elapsedTime * incrementPerMs);  // Calculate the current count
+    const now = new Date();
+    const elapsedTime = now - startDate;
 
-    // Format the number with commas and ensure it's exactly 6 digits
-    const formattedCount = currentCount.toString().padStart(6, '0');  // Pad with leading zeros if necessary
+    // Calculate count
+    let currentCount = Math.floor(startCount + elapsedTime * incrementPerMs);
 
-    // Update each digit individually
+    // Clamp so it never exceeds target
+    if (currentCount > endCount) {
+        currentCount = endCount;
+    }
+    if (currentCount < 0) {
+        currentCount = 0;
+    }
+
+    // Ensure 6 digits (leading zeros)
+    const formattedCount = currentCount.toString().padStart(6, '0');
+
+    // Update each digit
     const digitElements = document.querySelectorAll('.digit');
-    for (let i = 0; i < digitElements.length; i++) {
-        // Get the current digit in the counter
+
+    digitElements.forEach((digitEl, i) => {
         const newDigit = formattedCount[i];
 
-        // Animate the digit by updating the text content
-        if (digitElements[i].textContent !== newDigit) {
-            digitElements[i].style.transform = 'translateY(-100%)'; // Slide the digit out of view
+        if (digitEl.textContent !== newDigit) {
+            digitEl.style.transform = 'translateY(-100%)';
             setTimeout(() => {
-                digitElements[i].textContent = newDigit;  // Update the digit
-                digitElements[i].style.transform = 'translateY(0)';  // Slide the digit into view
-            }, 400); // Delay the update slightly to create a smooth rolling effect
+                digitEl.textContent = newDigit;
+                digitEl.style.transform = 'translateY(0)';
+            }, 400);
         }
-    }
+    });
 
-    // Continue updating the counter as long as it hasn't reached the end count
-    if (currentCount < endCount) {
-        requestAnimationFrame(updateCounter);  // Keep updating the counter smoothly
-    }
+    requestAnimationFrame(updateCounter);
 }
 
 // Start the counter
